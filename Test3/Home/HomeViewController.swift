@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let names = ["VN Artifacts", "Huy", "Duc", "Tung", "Exit"]
+    let names = ["Houses", "Statues", "Accessories", "Musical Instruments", "Exit"]
     
     @IBOutlet weak var homeTV: UITableView!
     override func viewDidLoad() {

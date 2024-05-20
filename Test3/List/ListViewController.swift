@@ -19,6 +19,10 @@ class ListViewController: UIViewController {
         switch indexArr {
         case 0:
             object = ARObject.createVNObjects()
+        case 1:
+            object = ARObject.createStatuesObjects()
+        case 2:
+            object = ARObject.createAccessoriesObjects()
         default:
             object = ARObject.createVNObjects()
         }
