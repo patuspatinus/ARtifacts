@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let names = ["VN Artifacts", "Huy", "Duc", "Tung"]
+    let names = ["VN Artifacts", "Huy", "Duc", "Tung", "Exit"]
     
     @IBOutlet weak var homeTV: UITableView!
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return names.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
