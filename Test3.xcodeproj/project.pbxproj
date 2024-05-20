@@ -54,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263C2A0B2BFB802D005515BC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B410B2BFB02C6004E33C3 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		FA8B40FB2BFB02C6004E33C3 = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +88,7 @@
 				FAE536ED2BFB25220030F5E0 /* Home */,
 				FAE536F52BFB33090030F5E0 /* List */,
 				FAE536FA2BFB37E20030F5E0 /* Detail */,
-				FA8B410B2BFB02C6004E33C3 /* ViewController.swift */,
+				263C2A0B2BFB802D005515BC /* Main */,
 				FAE7FC1D2BFB4F56004C1568 /* NhaThaiTrangVoice.mp3 */,
 				FA8B41102BFB02C7004E33C3 /* Assets.xcassets */,
 			);
