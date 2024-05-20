@@ -155,12 +155,21 @@ class ViewController: UIViewController, ARSessionDelegate {
 
     // Helper method to convert SCNNode to ModelEntity
     func convertToModelEntity(node: SCNNode) -> ModelEntity? {
-        let scene = SCNScene()
+        let scene = SCNScene(named: ARLink)!
         scene.rootNode.addChildNode(node.clone())
 
         // Create a temporary directory
         let tempDirectory = FileManager.default.temporaryDirectory
-        let tempFileURL = tempDirectory.appendingPathComponent("temp.usdz")
+        let uuid = UUID().uuidString
+        let tempFileURL = tempDirectory.appendingPathComponent("\(uuid).usdz")
+
+        if FileManager.default.fileExists(atPath: tempFileURL.path) {
+            do {
+                try FileManager.default.removeItem(at: tempFileURL)
+            } catch {
+                print("Failed to delete existing temp.usdz file: \(error)")
+            }
+        }
 
         // Export the SCNNode to USDZ
         let success = scene.write(to: tempFileURL, options: nil, delegate: nil, progressHandler: nil)
