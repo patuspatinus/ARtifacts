@@ -61,5 +61,4 @@ class DetailViewController: UIViewController {
         print("1")
         audioPlayer!.play()
     }
-    
 }
