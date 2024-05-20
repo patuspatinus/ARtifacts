@@ -72,6 +72,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ListToDetail", sender: self)
+//        tableView.
     }
     
 }
